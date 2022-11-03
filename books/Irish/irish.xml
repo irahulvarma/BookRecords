@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <book>
+        <name>Irish For Beginners</name>
+        <author>Angela Wilkens</author>
+    </book>
+    <book>
+        <name>Ag Greadadh Bas sa Reilig</name>
+        <author>Louis de Paor</author>
+    </book>
+    <book>
+        <name>Béasa an Túir</name>
+        <author>Máirtín Ó Direáin</author>
+    </book>
+</catalog>

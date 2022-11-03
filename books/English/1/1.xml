@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<catalog>
+    <book>
+        <name>Catch-22</name>
+        <author>Joseph Heller</author>
+    </book>
+    <book>
+        <name>Heart of Darkness</name>
+        <author>Joseph Conrad</author>
+    </book>
+    <book>
+        <name>Water for Elephants</name>
+        <author>Sara Gruen</author>
+    </book>
+    <book>
+        <name>Book 1</name>
+        <author>Pavel Vejinov</author>
+    </book>
+    <book>
+        <name>Book 2</name>
+        <author>Pavel Vejinov</author>
+    </book>
+</catalog>
