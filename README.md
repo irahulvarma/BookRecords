@@ -41,7 +41,7 @@ Demo XML:
 </catalog>
 ``` 
 ## Run
-Now it's time to run index.php and search author name, you will get results.
+Now it's time to run ```index.php```, example:```http://localhost/BookRecords/``` and search author name, you will get results.
 
 **HINT**: you can type 'sh' and the results will be displayed below.
 
