@@ -7,6 +7,7 @@
 namespace BookRecords\Controllers; 
 
 use BookRecords\DB\DBConnection;
+use BookRecords\DB\DBSchema;
 use BookRecords\Model\Book;
 use BookRecords\Utility\SaveXMLBookRecords;
 
@@ -43,18 +44,5 @@ class PageController {
         
         echo json_encode($books);
     }
-    
-    /**
-     * Find xml from the mentioned 
-     * directory
-     *
-     * @return void
-     */
-    public function run_script()
-    {
-        $xmlrecords = new SaveXMLBookRecords(DIRECTORY_XML_FOLDER);
-        $xmlrecords->run();
 
-        echo "\n\nRecords inserted\n\n\n";
-    }
 }

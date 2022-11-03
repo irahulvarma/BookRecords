@@ -10,10 +10,15 @@ class DBConnection
 	public $connection;
 	
 	//initialize connection with database
-	function __construct($driver, $host, $username, $password, $database){
+	function __construct($driver, $host, $username, $password, $database = null)
+	{
+		$db_string = "";
+		if ($database) {
+			$db_string = ";dbname=" . $database;
+		}
 		
 		try{
-            $this->connection = new \PDO($driver.":host=" . $host . ";dbname=" . $database, $username, $password);
+            $this->connection = new \PDO($driver.":host=" . $host . $db_string, $username, $password);
             $this->connection->exec("set names utf8");
             return $this->connection;
         }catch(\PDOException $exception){			
@@ -27,7 +32,8 @@ class DBConnection
 	}
 	
 	//execution of query here
-	function query($query, $conditions = array(),$assoc = ''){		
+	function query($query, $conditions = array(), $assoc = '')
+	{		
 				
 		$stmt = $this->connection->prepare($query);
 		$stmt->execute($conditions);
@@ -39,12 +45,19 @@ class DBConnection
 	}
 	
 	//insertion of record and return row count
-	function insertTable($query, $parameters){
+	function insertTable($query, $parameters)
+	{
 		
 		$stmt = $this->connection->prepare($query);
 		$stmt->execute($parameters);
 		return $this->connection->lastInsertId();		
 		
+	}
+
+	//for execution of create database, tables or others
+	function exec($query) 
+	{
+		return $this->connection->exec($query);
 	}
 	
 }

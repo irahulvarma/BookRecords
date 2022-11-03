@@ -18,10 +18,3 @@ $routes->add('searchbookbyauthor',
         array('name' => '[A-Za-z]*')
     )
 );
-
-$routes->add('run_script',
-    new Route(
-        constant('URL_SUBFOLDER').'/run_script',
-        array('controller' => 'PageController', 'method' => 'run_script')
-    )
-);

@@ -20,6 +20,9 @@ class Book {
     //name of the table where book records are stored
     private $table_name = 'books';
 
+    //name of the author table
+    private $author_table_name = 'authors';
+
     function __construct($dbconn, $author_id = null, $name = null)
     {
         $this->author_id = $author_id;
@@ -63,10 +66,10 @@ class Book {
         $stmt = "SELECT ".
                 "A.name, ".
                 "B.name AS book_name ".
-                "FROM authors AS A ".
-                "JOIN books AS B ON A.id = B.author_id ".
+                "FROM $this->author_table_name AS A ".
+                "JOIN $this->table_name AS B ON A.id = B.author_id ".
                 "WHERE A.name LIKE :name ";
-                
+
         $books = $this->dbconn->query($stmt, ['name' => $name], 'assoc');
 
         return $books;
