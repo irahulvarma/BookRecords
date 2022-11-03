@@ -40,7 +40,7 @@ Demo XML:
     </book>
 </catalog>
 ``` 
-### Run
+## Run
 Now it's time to run index.php and search author name, you will get results.
 
 **HINT**: you can type 'sh' and the results will be displayed below.
