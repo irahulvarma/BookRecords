@@ -13,7 +13,7 @@ composer install
 ## Instructions
 * Navigate to the file: ```config/parameters.php``` and configure database driver and related changes to database.
 
-* For the first time, you can execute the following command: ```php application.php populate-books```.
+* For the first time, go to the root directory of the project and execute the following command: ```php application.php populate-books```.
    The above point will create database and populate the author and books.
 
 * Automated cron job needs to be set in order to synchronize the data periodically. Please follow the steps 
